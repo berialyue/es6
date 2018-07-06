@@ -58,3 +58,19 @@
 // }
 
 // es(0,1,2,3,4,5,6,7,8)
+
+// let a = 'berialyue1111';
+// let b = `yueduming${a}`;
+// let c =1;
+// let d = 2;
+// let result = `${c+d}`
+// document.write(b)
+// document.write(result)
+
+// let a = 'berialyue'
+
+// let b = 'yuedumingyuedumingberialyueyuedumingberialyue'
+
+// document.write(b.endsWith(a))
+
+document.write('berialyue | '.repeat(9))
