@@ -77,34 +77,51 @@
 
 // document.write('berialyue | '.repeat(9))
 
-var binary = 21;
+// 5let binary = 0B010101;
 
-console.log(binary);
+// console.log(binary)
 
-var octal = 438;
-console.log(octal);
+// let octal = 0o666;
+// console.log(octal)
 
-var a = 11 / 4;
-console.log(Number.isFinite(a));
-console.log(Number.isFinite('berialyue'));
-console.log(Number.isFinite(NaN));
-console.log(Number.isFinite(undefined));
-console.log(Number.isFinite(null));
+// let a = 11/4;
+// console.log(Number.isFinite(a))
+// console.log(Number.isFinite('berialyue'))
+// console.log(Number.isFinite(NaN))
+// console.log(Number.isFinite(undefined))
+// console.log(Number.isFinite(null))
 
-console.log(Number.isNaN(NaN));
-console.log(Number.isNaN(11));
+// console.log(Number.isNaN(NaN))
+// console.log(Number.isNaN(11))
 
-console.log(Number.isInteger(11));
-console.log(Number.isInteger(11 / 4));
-console.log(Number.isInteger('a'));
-console.log(Number.isInteger(undefined));
+// console.log(Number.isInteger(11));
+// console.log(Number.isInteger(11/4));
+// console.log(Number.isInteger('a'));
+// console.log(Number.isInteger(undefined));
 
-console.log(Number.parseInt(11 / 4));
-console.log(Number.parseFloat(11 / 4).toFixed(4));
+// console.log(Number.parseInt(11/4));
+// console.log(Number.parseFloat(11/4).toFixed(4));
 
-var aaa = Math.pow(2, 53) + 1;
-console.log(aaa);
+// let aaa = Math.pow(2,53)+1;
+// console.log(aaa)
 
-console.log(Number.MAX_SAFE_INTEGER);
-console.log(Number.MIN_SAFE_INTEGER);
-console.log(Number.isSafeInteger(aaa));
+// console.log(Number.MAX_SAFE_INTEGER)
+// console.log(Number.MIN_SAFE_INTEGER)
+// console.log(Number.isSafeInteger(aaa))
+
+var json = {
+  '0': 'berialyue',
+  '1': 'yueduming',
+  length: 2
+};
+
+var arr1 = Array.from(json);
+console.log(arr1);
+var arr2 = Array.of(3, 4, 5, 6);
+console.log(arr2);
+
+var arr = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+var b = arr.find(function (value, index, arr) {
+  return value > 5;
+});
+console.log(b);
