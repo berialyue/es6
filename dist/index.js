@@ -75,4 +75,36 @@
 
 // document.write(b.endsWith(a))
 
-document.write('berialyue | '.repeat(9));
+// document.write('berialyue | '.repeat(9))
+
+var binary = 21;
+
+console.log(binary);
+
+var octal = 438;
+console.log(octal);
+
+var a = 11 / 4;
+console.log(Number.isFinite(a));
+console.log(Number.isFinite('berialyue'));
+console.log(Number.isFinite(NaN));
+console.log(Number.isFinite(undefined));
+console.log(Number.isFinite(null));
+
+console.log(Number.isNaN(NaN));
+console.log(Number.isNaN(11));
+
+console.log(Number.isInteger(11));
+console.log(Number.isInteger(11 / 4));
+console.log(Number.isInteger('a'));
+console.log(Number.isInteger(undefined));
+
+console.log(Number.parseInt(11 / 4));
+console.log(Number.parseFloat(11 / 4).toFixed(4));
+
+var aaa = Math.pow(2, 53) + 1;
+console.log(aaa);
+
+console.log(Number.MAX_SAFE_INTEGER);
+console.log(Number.MIN_SAFE_INTEGER);
+console.log(Number.isSafeInteger(aaa));
