@@ -107,19 +107,37 @@
 // console.log(Number.MIN_SAFE_INTEGER)
 // console.log(Number.isSafeInteger(aaa))
 
-let json = {
-  '0': 'berialyue',
-  '1': 'yueduming',
-  length: 2
+// let json = {
+//   '0': 'berialyue',
+//   '1': 'yueduming',
+//   length: 2
+// }
+
+// let arr1 = Array.from(json)
+// console.log(arr1)
+// let arr2 = Array.of(3,4,5,6)
+// console.log(arr2)
+
+// let arr = [1,2,3,4,5,6,7,8,9]
+// let b = arr.find(function(value, index, arr){
+//   return value > 5
+// })
+// console.log(b)
+
+let arr = ['berialyue', 'yueduming', 'berial']
+console.log(arr)
+arr.fill('web',2,3)
+console.log(arr)
+for(let [index,item] of arr.entries()){
+  console.log(`${index} : ${item}`)
 }
 
-let arr1 = Array.from(json)
-console.log(arr1)
-let arr2 = Array.of(3,4,5,6)
-console.log(arr2)
+let arr1 = ['berialyue', 'yueduming', 'berial']
+let list = arr1.entries()
+console.log(list.next().value)
+console.log('------------------')
+console.log(list.next().value)
+console.log('******************')
+console.log(list.next().value)
+console.log('==================')
 
-let arr = [1,2,3,4,5,6,7,8,9]
-let b = arr.find(function(value, index, arr){
-  return value > 5
-})
-console.log(b)
