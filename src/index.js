@@ -152,8 +152,50 @@
 // console.log(add(0))
 // console.log(add.length)
 
-var add = (a,b=1) => {
-  console.log('berialyue');
-  return a+b
+// var add = (a,b=1) => {
+//   console.log('berialyue');
+//   return a+b
+// }
+// console.log(add(3,5))
+
+let json = {
+  'a' : 'berialyue',
+  'b' : 'yueduming'
 }
-console.log(add(3,5))
+
+function fun({a,b='web'}){
+  console.log(a,b)
+}
+fun(json)
+
+let arr=['berialyue','yueduming','berial']
+function fun1(a,b,c){
+  console.log(a,b,c)
+}
+
+fun1(...arr)
+
+let obj = {
+  a:'berialyue',
+  b:'yueduming'
+}
+
+console.log('a' in obj)
+console.log('c' in obj)
+
+let arr1=['',,,];
+console.log(0 in arr1)
+console.log(2 in arr1)
+
+//数组遍历
+let arr2=['berialyue','yueduming','berial']
+arr2.forEach((val,index)=>console.log(index,val))
+arr2.filter(x=>console.log(x))
+arr2.some(x => console.log(x))
+arr2.map(x=>console.log(x))
+console.log(arr.map(x=>'web'))
+console.log(arr2)
+
+console.log(arr2.toString())
+console.log(arr.join(' | '))
+console.log(arr.join('-'))
