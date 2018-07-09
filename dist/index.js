@@ -1,6 +1,4 @@
-'use strict';
-
-var _slicedToArray = function () { function sliceIterator(arr, i) { var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"]) _i["return"](); } finally { if (_d) throw _e; } } return _arr; } return function (arr, i) { if (Array.isArray(arr)) { return arr; } else if (Symbol.iterator in Object(arr)) { return sliceIterator(arr, i); } else { throw new TypeError("Invalid attempt to destructure non-iterable instance"); } }; }();
+"use strict";
 
 // const a = "berialyue"
 
@@ -128,42 +126,36 @@ var _slicedToArray = function () { function sliceIterator(arr, i) { var _arr = [
 // })
 // console.log(b)
 
-var arr = ['berialyue', 'yueduming', 'berial'];
-console.log(arr);
-arr.fill('web', 2, 3);
-console.log(arr);
-var _iteratorNormalCompletion = true;
-var _didIteratorError = false;
-var _iteratorError = undefined;
+// let arr = ['berialyue', 'yueduming', 'berial']
+// console.log(arr)
+// arr.fill('web',2,3)
+// console.log(arr)
+// for(let [index,item] of arr.entries()){
+//   console.log(`${index} : ${item}`)
+// }
 
-try {
-  for (var _iterator = arr.entries()[Symbol.iterator](), _step; !(_iteratorNormalCompletion = (_step = _iterator.next()).done); _iteratorNormalCompletion = true) {
-    var _step$value = _slicedToArray(_step.value, 2),
-        index = _step$value[0],
-        item = _step$value[1];
+// let arr1 = ['berialyue', 'yueduming', 'berial']
+// let list = arr1.entries()
+// console.log(list.next().value)
+// console.log('------------------')
+// console.log(list.next().value)
+// console.log('******************')
+// console.log(list.next().value)
+// console.log('==================')
 
-    console.log(index + ' : ' + item);
-  }
-} catch (err) {
-  _didIteratorError = true;
-  _iteratorError = err;
-} finally {
-  try {
-    if (!_iteratorNormalCompletion && _iterator.return) {
-      _iterator.return();
-    }
-  } finally {
-    if (_didIteratorError) {
-      throw _iteratorError;
-    }
-  }
-}
+// function add(a,b=1){
+//   if(a == 0) {
+//     throw new Error('A is error')
+//   }
+//   return a+b;
+// }
+// console.log(add(2,3))
+// console.log(add(1,2))
+// console.log(add(0))
+// console.log(add.length)
 
-var arr1 = ['berialyue', 'yueduming', 'berial'];
-var list = arr1.entries();
-console.log(list.next().value);
-console.log('------------------');
-console.log(list.next().value);
-console.log('******************');
-console.log(list.next().value);
-console.log('==================');
+var add = function add(a) {
+  var b = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 1;
+  return a + b;
+};
+console.log(add(3));

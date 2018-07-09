@@ -124,20 +124,36 @@
 // })
 // console.log(b)
 
-let arr = ['berialyue', 'yueduming', 'berial']
-console.log(arr)
-arr.fill('web',2,3)
-console.log(arr)
-for(let [index,item] of arr.entries()){
-  console.log(`${index} : ${item}`)
+// let arr = ['berialyue', 'yueduming', 'berial']
+// console.log(arr)
+// arr.fill('web',2,3)
+// console.log(arr)
+// for(let [index,item] of arr.entries()){
+//   console.log(`${index} : ${item}`)
+// }
+
+// let arr1 = ['berialyue', 'yueduming', 'berial']
+// let list = arr1.entries()
+// console.log(list.next().value)
+// console.log('------------------')
+// console.log(list.next().value)
+// console.log('******************')
+// console.log(list.next().value)
+// console.log('==================')
+
+// function add(a,b=1){
+//   if(a == 0) {
+//     throw new Error('A is error')
+//   }
+//   return a+b;
+// }
+// console.log(add(2,3))
+// console.log(add(1,2))
+// console.log(add(0))
+// console.log(add.length)
+
+var add = (a,b=1) => {
+  console.log('berialyue');
+  return a+b
 }
-
-let arr1 = ['berialyue', 'yueduming', 'berial']
-let list = arr1.entries()
-console.log(list.next().value)
-console.log('------------------')
-console.log(list.next().value)
-console.log('******************')
-console.log(list.next().value)
-console.log('==================')
-
+console.log(add(3,5))
