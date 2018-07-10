@@ -158,44 +158,84 @@
 // }
 // console.log(add(3,5))
 
-let json = {
-  'a' : 'berialyue',
-  'b' : 'yueduming'
-}
+// let json = {
+//   'a' : 'berialyue',
+//   'b' : 'yueduming'
+// }
 
-function fun({a,b='web'}){
-  console.log(a,b)
-}
-fun(json)
+// function fun({a,b='web'}){
+//   console.log(a,b)
+// }
+// fun(json)
 
-let arr=['berialyue','yueduming','berial']
-function fun1(a,b,c){
-  console.log(a,b,c)
-}
+// let arr=['berialyue','yueduming','berial']
+// function fun1(a,b,c){
+//   console.log(a,b,c)
+// }
 
-fun1(...arr)
+// fun1(...arr)
+
+// let obj = {
+//   a:'berialyue',
+//   b:'yueduming'
+// }
+
+// console.log('a' in obj)
+// console.log('c' in obj)
+
+// let arr1=['',,,];
+// console.log(0 in arr1)
+// console.log(2 in arr1)
+
+// //数组遍历
+// let arr2=['berialyue','yueduming','berial']
+// arr2.forEach((val,index)=>console.log(index,val))
+// arr2.filter(x=>console.log(x))
+// arr2.some(x => console.log(x))
+// arr2.map(x=>console.log(x))
+// console.log(arr.map(x=>'web'))
+// console.log(arr2)
+
+// console.log(arr2.toString())
+// console.log(arr.join(' | '))
+// console.log(arr.join('-'))
+
+let name = 'berialyue';
+let skill = "ko"
 
 let obj = {
-  a:'berialyue',
-  b:'yueduming'
+  name,
+  skill
 }
+console.log(obj)
 
-console.log('a' in obj)
-console.log('c' in obj)
+let key = "skill";
+var obj1 = {
+ [key] :'web',
+}
+console.log(obj1)
 
-let arr1=['',,,];
-console.log(0 in arr1)
-console.log(2 in arr1)
+let obj2 = {
+  add: (a,b) => a+b
+}
+console.log(obj2.add(1,2))
 
-//数组遍历
-let arr2=['berialyue','yueduming','berial']
-arr2.forEach((val,index)=>console.log(index,val))
-arr2.filter(x=>console.log(x))
-arr2.some(x => console.log(x))
-arr2.map(x=>console.log(x))
-console.log(arr.map(x=>'web'))
-console.log(arr2)
+let obj3 = {name:'berial'}
+let obj4 = {name:'berial'}
 
-console.log(arr2.toString())
-console.log(arr.join(' | '))
-console.log(arr.join('-'))
+console.log(obj3.name === obj4.name)
+console.log(Object.is(obj3.name, obj4.name))
+
+console.log(+0 === -0)
+console.log(NaN === NaN)
+
+console.log(Object.is(+0,-0))
+console.log(Object.is(NaN,NaN ))
+
+let a = {a: 'berialyue'}
+let b = {b: 'yueduming'}
+let c = {c: 'berial'}
+
+let d = Object.assign(a,b,c)
+
+console.log(d)
