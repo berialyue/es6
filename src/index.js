@@ -200,42 +200,77 @@
 // console.log(arr.join(' | '))
 // console.log(arr.join('-'))
 
-let name = 'berialyue';
-let skill = "ko"
+// let name = 'berialyue';
+// let skill = "ko"
 
+// let obj = {
+//   name,
+//   skill
+// }
+// console.log(obj)
+
+// let key = "skill";
+// var obj1 = {
+//  [key] :'web',
+// }
+// console.log(obj1)
+
+// let obj2 = {
+//   add: (a,b) => a+b
+// }
+// console.log(obj2.add(1,2))
+
+// let obj3 = {name:'berial'}
+// let obj4 = {name:'berial'}
+
+// console.log(obj3.name === obj4.name)
+// console.log(Object.is(obj3.name, obj4.name))
+
+// console.log(+0 === -0)
+// console.log(NaN === NaN)
+
+// console.log(Object.is(+0,-0))
+// console.log(Object.is(NaN,NaN ))
+
+// let a = {a: 'berialyue'}
+// let b = {b: 'yueduming'}
+// let c = {c: 'berial'}
+
+// let d = Object.assign(a,b,c)
+
+// console.log(d)
+
+let a = new String
+let b = new Number
+let c = new Boolean
+let d = new Array
+let e = new Object
+
+let f = Symbol()
+console.log(typeof(f))
+
+let berial = Symbol('berialyue')
+console.log(berial)
+console.log(berial.toString())
+
+let aaa = Symbol()
 let obj = {
-  name,
-  skill
+  [aaa] : 'berialyue'
 }
-console.log(obj)
 
-let key = "skill";
-var obj1 = {
- [key] :'web',
+console.log(obj[aaa])
+obj[aaa] = 'web'
+console.log(obj[aaa])
+
+let obj1 = {
+  name: 'berialyue',
+  skill: 'ko',
 }
+let age = Symbol()
+obj1[age] = 20
 console.log(obj1)
 
-let obj2 = {
-  add: (a,b) => a+b
+for(let item in obj1){
+  console.log(obj1[item])
 }
-console.log(obj2.add(1,2))
-
-let obj3 = {name:'berial'}
-let obj4 = {name:'berial'}
-
-console.log(obj3.name === obj4.name)
-console.log(Object.is(obj3.name, obj4.name))
-
-console.log(+0 === -0)
-console.log(NaN === NaN)
-
-console.log(Object.is(+0,-0))
-console.log(Object.is(NaN,NaN ))
-
-let a = {a: 'berialyue'}
-let b = {b: 'yueduming'}
-let c = {c: 'berial'}
-
-let d = Object.assign(a,b,c)
-
-console.log(d)
+console.log(obj1[age])
