@@ -240,37 +240,67 @@
 
 // console.log(d)
 
-let a = new String
-let b = new Number
-let c = new Boolean
-let d = new Array
-let e = new Object
+// let a = new String
+// let b = new Number
+// let c = new Boolean
+// let d = new Array
+// let e = new Object
 
-let f = Symbol()
-console.log(typeof(f))
+// let f = Symbol()
+// console.log(typeof(f))
 
-let berial = Symbol('berialyue')
-console.log(berial)
-console.log(berial.toString())
+// let berial = Symbol('berialyue')
+// console.log(berial)
+// console.log(berial.toString())
 
-let aaa = Symbol()
+// let aaa = Symbol()
+// let obj = {
+//   [aaa] : 'berialyue'
+// }
+
+// console.log(obj[aaa])
+// obj[aaa] = 'web'
+// console.log(obj[aaa])
+
+// let obj1 = {
+//   name: 'berialyue',
+//   skill: 'ko',
+// }
+// let age = Symbol()
+// obj1[age] = 20
+// console.log(obj1)
+
+// for(let item in obj1){
+//   console.log(obj1[item])
+// }
+// console.log(obj1[age])
+
+let setArr = new Set(['berialyue','yueduming','berial','berialyue'])
+console.log(setArr)
+
+setArr.add('abc')
+console.log(setArr)
+
+setArr.delete('berial')
+console.log(setArr)
+console.log(setArr.has('berialyue'))
+console.log(setArr.has('berial'))
+
+// setArr.clear()
+for(let item of setArr){
+  console.log(item)
+}
+console.log(setArr.size)
+
+setArr.forEach((value) => console.log(value))
+
+let weakObj = new WeakSet()
 let obj = {
-  [aaa] : 'berialyue'
+  a:'berialyue',
+  b:'yueduming'
 }
-
-console.log(obj[aaa])
-obj[aaa] = 'web'
-console.log(obj[aaa])
-
-let obj1 = {
-  name: 'berialyue',
-  skill: 'ko',
-}
-let age = Symbol()
-obj1[age] = 20
-console.log(obj1)
-
-for(let item in obj1){
-  console.log(obj1[item])
-}
-console.log(obj1[age])
+weakObj.add(obj)
+console.log(weakObj)
+let obj1 = obj;
+weakObj.add(obj1)
+console.log(weakObj)
