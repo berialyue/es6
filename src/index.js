@@ -305,24 +305,68 @@
 // weakObj.add(obj1)
 // console.log(weakObj)
 
-let json = {
-  name:'berialyue',
-  skill: 'web'
-}
-console.log(json.name)
+// let json = {
+//   name:'berialyue',
+//   skill: 'web'
+// }
+// console.log(json.name)
 
-let map = new Map()
-map.set(json,'i am')
-console.log(map)
-map.set('js',json)
-console.log(map)
-
-console.log(map.get(json))
-console.log(map.get('js'))
-
-// console.log(map.delete(json))
+// let map = new Map()
+// map.set(json,'i am')
+// console.log(map)
+// map.set('js',json)
 // console.log(map)
 
-console.log(map.size)
+// console.log(map.get(json))
+// console.log(map.get('js'))
 
-console.log(map.has(json))
+// // console.log(map.delete(json))
+// // console.log(map)
+
+// console.log(map.size)
+
+// console.log(map.has(json))
+
+let obj = {
+  add: function(val){
+    return val+100
+  },
+  name: 'i am yueduming'
+}
+// console.log(obj.add(100))
+// console.log(obj.name)
+
+let pro = new Proxy({
+  add: function(val){
+    return val+100
+  },
+  name: 'i am berialyue'
+},{
+  get: function(target,key,property){
+    console.log('come in get');
+    return target[key];
+  },
+  set: function(target, key, value, receiver){
+    console.log(`setting ${key} = ${value}`)
+    return target[key] = value
+  }
+})
+
+console.log(pro.name)
+pro.name="berial"
+console.log(pro.name)
+
+let target = function(){
+  return 'i am berialyue'
+}
+
+let handler = {
+  apply(target,ctx,args){
+    console.log('do apply')
+    return Reflect.apply(...arguments)
+  }
+}
+
+let pro1 = new Proxy(target,handler)
+
+console.log(pro1())
