@@ -275,32 +275,54 @@
 // }
 // console.log(obj1[age])
 
-let setArr = new Set(['berialyue','yueduming','berial','berialyue'])
-console.log(setArr)
+// let setArr = new Set(['berialyue','yueduming','berial','berialyue'])
+// console.log(setArr)
 
-setArr.add('abc')
-console.log(setArr)
+// setArr.add('abc')
+// console.log(setArr)
 
-setArr.delete('berial')
-console.log(setArr)
-console.log(setArr.has('berialyue'))
-console.log(setArr.has('berial'))
+// setArr.delete('berial')
+// console.log(setArr)
+// console.log(setArr.has('berialyue'))
+// console.log(setArr.has('berial'))
 
-// setArr.clear()
-for(let item of setArr){
-  console.log(item)
+// // setArr.clear()
+// for(let item of setArr){
+//   console.log(item)
+// }
+// console.log(setArr.size)
+
+// setArr.forEach((value) => console.log(value))
+
+// let weakObj = new WeakSet()
+// let obj = {
+//   a:'berialyue',
+//   b:'yueduming'
+// }
+// weakObj.add(obj)
+// console.log(weakObj)
+// let obj1 = obj;
+// weakObj.add(obj1)
+// console.log(weakObj)
+
+let json = {
+  name:'berialyue',
+  skill: 'web'
 }
-console.log(setArr.size)
+console.log(json.name)
 
-setArr.forEach((value) => console.log(value))
+let map = new Map()
+map.set(json,'i am')
+console.log(map)
+map.set('js',json)
+console.log(map)
 
-let weakObj = new WeakSet()
-let obj = {
-  a:'berialyue',
-  b:'yueduming'
-}
-weakObj.add(obj)
-console.log(weakObj)
-let obj1 = obj;
-weakObj.add(obj1)
-console.log(weakObj)
+console.log(map.get(json))
+console.log(map.get('js'))
+
+// console.log(map.delete(json))
+// console.log(map)
+
+console.log(map.size)
+
+console.log(map.has(json))
