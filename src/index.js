@@ -327,46 +327,86 @@
 
 // console.log(map.has(json))
 
-let obj = {
-  add: function(val){
-    return val+100
-  },
-  name: 'i am yueduming'
-}
-// console.log(obj.add(100))
-// console.log(obj.name)
+// let obj = {
+//   add: function(val){
+//     return val+100
+//   },
+//   name: 'i am yueduming'
+// }
+// // console.log(obj.add(100))
+// // console.log(obj.name)
 
-let pro = new Proxy({
-  add: function(val){
-    return val+100
-  },
-  name: 'i am berialyue'
-},{
-  get: function(target,key,property){
-    console.log('come in get');
-    return target[key];
-  },
-  set: function(target, key, value, receiver){
-    console.log(`setting ${key} = ${value}`)
-    return target[key] = value
+// let pro = new Proxy({
+//   add: function(val){
+//     return val+100
+//   },
+//   name: 'i am berialyue'
+// },{
+//   get: function(target,key,property){
+//     console.log('come in get');
+//     return target[key];
+//   },
+//   set: function(target, key, value, receiver){
+//     console.log(`setting ${key} = ${value}`)
+//     return target[key] = value
+//   }
+// })
+
+// console.log(pro.name)
+// pro.name="berial"
+// console.log(pro.name)
+
+// let target = function(){
+//   return 'i am berialyue'
+// }
+
+// let handler = {
+//   apply(target,ctx,args){
+//     console.log('do apply')
+//     return Reflect.apply(...arguments)
+//   }
+// }
+
+// let pro1 = new Proxy(target,handler)
+
+// console.log(pro1())
+
+let state = 1
+
+function step1(resolve,reject){
+  console.log('1.开始-洗菜做饭')
+  if(state == 1){
+    resolve('洗菜做饭-完成')
+  }else{
+    reject('洗菜做饭-出错')
   }
-})
-
-console.log(pro.name)
-pro.name="berial"
-console.log(pro.name)
-
-let target = function(){
-  return 'i am berialyue'
 }
 
-let handler = {
-  apply(target,ctx,args){
-    console.log('do apply')
-    return Reflect.apply(...arguments)
+function step2(resolve,reject){
+  console.log('2.开始-坐下来吃饭')
+  state = 0
+  if(state == 1){
+    resolve('坐下来吃饭-完成')
+  }else{
+    reject('坐下来吃饭-出错')
   }
 }
 
-let pro1 = new Proxy(target,handler)
+function step3(resolve,reject){
+  console.log('3.开始-收拾桌子洗碗')
+  if(state == 1){
+    resolve('收拾桌子洗碗-完成')
+  }else{
+    reject('收拾桌子洗碗-出错')
+  }
+}
 
-console.log(pro1())
+new Promise(step1).then(function(val){
+  console.log(val);
+  return new Promise(step2)
+}).then(
+  function(val){
+    console.log(val);
+    return new Promise(step3)
+  }).then(function(val){
+    console.log(val)})
