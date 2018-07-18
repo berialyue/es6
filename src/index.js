@@ -411,31 +411,35 @@
 //   }).then(function(val){
 //     console.log(val)})
 
-class Coder{
-  name(val) {
-    console.log(val)
-    return val
-  }
-  skill(val) {
-    console.log(this.name('berialyue') + ':' + 'Skill ' + val)
-  }
-  constructor(a,b){
-    this.a=a
-    this.b=b
-  }
-  add(){
-    return this.a+this.b
-  }
-}
+// class Coder{
+//   name(val) {
+//     console.log(val)
+//     return val
+//   }
+//   skill(val) {
+//     console.log(this.name('berialyue') + ':' + 'Skill ' + val)
+//   }
+//   constructor(a,b){
+//     this.a=a
+//     this.b=b
+//   }
+//   add(){
+//     return this.a+this.b
+//   }
+// }
 
-let berial = new Coder(1,2)
+// let berial = new Coder(1,2)
 
-console.log(berial.add('web'))
+// console.log(berial.add('web'))
 
-class htmler extends Coder{
+// class htmler extends Coder{
 
-}
+// }
 
-let pang = new htmler
+// let pang = new htmler
 
-pang.name('yue')
+// pang.name('yue')
+
+import { name } from './test'
+
+console.log(name)
