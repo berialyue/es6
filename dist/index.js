@@ -1,6 +1,8 @@
-"use strict";
+'use strict';
 
-// const a = "berialyue"
+var _test = require('./test');
+
+console.log(_test.name); // const a = "berialyue"
 
 
 // var i = 1;
@@ -154,8 +156,290 @@
 // console.log(add(0))
 // console.log(add.length)
 
-var add = function add(a) {
-  var b = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 1;
-  return a + b;
-};
-console.log(add(3));
+// var add = (a,b=1) => {
+//   console.log('berialyue');
+//   return a+b
+// }
+// console.log(add(3,5))
+
+// let json = {
+//   'a' : 'berialyue',
+//   'b' : 'yueduming'
+// }
+
+// function fun({a,b='web'}){
+//   console.log(a,b)
+// }
+// fun(json)
+
+// let arr=['berialyue','yueduming','berial']
+// function fun1(a,b,c){
+//   console.log(a,b,c)
+// }
+
+// fun1(...arr)
+
+// let obj = {
+//   a:'berialyue',
+//   b:'yueduming'
+// }
+
+// console.log('a' in obj)
+// console.log('c' in obj)
+
+// let arr1=['',,,];
+// console.log(0 in arr1)
+// console.log(2 in arr1)
+
+// //数组遍历
+// let arr2=['berialyue','yueduming','berial']
+// arr2.forEach((val,index)=>console.log(index,val))
+// arr2.filter(x=>console.log(x))
+// arr2.some(x => console.log(x))
+// arr2.map(x=>console.log(x))
+// console.log(arr.map(x=>'web'))
+// console.log(arr2)
+
+// console.log(arr2.toString())
+// console.log(arr.join(' | '))
+// console.log(arr.join('-'))
+
+// let name = 'berialyue';
+// let skill = "ko"
+
+// let obj = {
+//   name,
+//   skill
+// }
+// console.log(obj)
+
+// let key = "skill";
+// var obj1 = {
+//  [key] :'web',
+// }
+// console.log(obj1)
+
+// let obj2 = {
+//   add: (a,b) => a+b
+// }
+// console.log(obj2.add(1,2))
+
+// let obj3 = {name:'berial'}
+// let obj4 = {name:'berial'}
+
+// console.log(obj3.name === obj4.name)
+// console.log(Object.is(obj3.name, obj4.name))
+
+// console.log(+0 === -0)
+// console.log(NaN === NaN)
+
+// console.log(Object.is(+0,-0))
+// console.log(Object.is(NaN,NaN ))
+
+// let a = {a: 'berialyue'}
+// let b = {b: 'yueduming'}
+// let c = {c: 'berial'}
+
+// let d = Object.assign(a,b,c)
+
+// console.log(d)
+
+// let a = new String
+// let b = new Number
+// let c = new Boolean
+// let d = new Array
+// let e = new Object
+
+// let f = Symbol()
+// console.log(typeof(f))
+
+// let berial = Symbol('berialyue')
+// console.log(berial)
+// console.log(berial.toString())
+
+// let aaa = Symbol()
+// let obj = {
+//   [aaa] : 'berialyue'
+// }
+
+// console.log(obj[aaa])
+// obj[aaa] = 'web'
+// console.log(obj[aaa])
+
+// let obj1 = {
+//   name: 'berialyue',
+//   skill: 'ko',
+// }
+// let age = Symbol()
+// obj1[age] = 20
+// console.log(obj1)
+
+// for(let item in obj1){
+//   console.log(obj1[item])
+// }
+// console.log(obj1[age])
+
+// let setArr = new Set(['berialyue','yueduming','berial','berialyue'])
+// console.log(setArr)
+
+// setArr.add('abc')
+// console.log(setArr)
+
+// setArr.delete('berial')
+// console.log(setArr)
+// console.log(setArr.has('berialyue'))
+// console.log(setArr.has('berial'))
+
+// // setArr.clear()
+// for(let item of setArr){
+//   console.log(item)
+// }
+// console.log(setArr.size)
+
+// setArr.forEach((value) => console.log(value))
+
+// let weakObj = new WeakSet()
+// let obj = {
+//   a:'berialyue',
+//   b:'yueduming'
+// }
+// weakObj.add(obj)
+// console.log(weakObj)
+// let obj1 = obj;
+// weakObj.add(obj1)
+// console.log(weakObj)
+
+// let json = {
+//   name:'berialyue',
+//   skill: 'web'
+// }
+// console.log(json.name)
+
+// let map = new Map()
+// map.set(json,'i am')
+// console.log(map)
+// map.set('js',json)
+// console.log(map)
+
+// console.log(map.get(json))
+// console.log(map.get('js'))
+
+// // console.log(map.delete(json))
+// // console.log(map)
+
+// console.log(map.size)
+
+// console.log(map.has(json))
+
+// let obj = {
+//   add: function(val){
+//     return val+100
+//   },
+//   name: 'i am yueduming'
+// }
+// // console.log(obj.add(100))
+// // console.log(obj.name)
+
+// let pro = new Proxy({
+//   add: function(val){
+//     return val+100
+//   },
+//   name: 'i am berialyue'
+// },{
+//   get: function(target,key,property){
+//     console.log('come in get');
+//     return target[key];
+//   },
+//   set: function(target, key, value, receiver){
+//     console.log(`setting ${key} = ${value}`)
+//     return target[key] = value
+//   }
+// })
+
+// console.log(pro.name)
+// pro.name="berial"
+// console.log(pro.name)
+
+// let target = function(){
+//   return 'i am berialyue'
+// }
+
+// let handler = {
+//   apply(target,ctx,args){
+//     console.log('do apply')
+//     return Reflect.apply(...arguments)
+//   }
+// }
+
+// let pro1 = new Proxy(target,handler)
+
+// console.log(pro1())
+
+// let state = 1
+
+// function step1(resolve,reject){
+//   console.log('1.开始-洗菜做饭')
+//   if(state == 1){
+//     resolve('洗菜做饭-完成')
+//   }else{
+//     reject('洗菜做饭-出错')
+//   }
+// }
+
+// function step2(resolve,reject){
+//   console.log('2.开始-坐下来吃饭')
+//   state = 0
+//   if(state == 1){
+//     resolve('坐下来吃饭-完成')
+//   }else{
+//     reject('坐下来吃饭-出错')
+//   }
+// }
+
+// function step3(resolve,reject){
+//   console.log('3.开始-收拾桌子洗碗')
+//   if(state == 1){
+//     resolve('收拾桌子洗碗-完成')
+//   }else{
+//     reject('收拾桌子洗碗-出错')
+//   }
+// }
+
+// new Promise(step1).then(function(val){
+//   console.log(val);
+//   return new Promise(step2)
+// }).then(
+//   function(val){
+//     console.log(val);
+//     return new Promise(step3)
+//   }).then(function(val){
+//     console.log(val)})
+
+// class Coder{
+//   name(val) {
+//     console.log(val)
+//     return val
+//   }
+//   skill(val) {
+//     console.log(this.name('berialyue') + ':' + 'Skill ' + val)
+//   }
+//   constructor(a,b){
+//     this.a=a
+//     this.b=b
+//   }
+//   add(){
+//     return this.a+this.b
+//   }
+// }
+
+// let berial = new Coder(1,2)
+
+// console.log(berial.add('web'))
+
+// class htmler extends Coder{
+
+// }
+
+// let pang = new htmler
+
+// pang.name('yue')
